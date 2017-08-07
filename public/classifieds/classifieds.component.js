@@ -8,14 +8,18 @@
       templateUrl: "./classifieds/classifieds.template.html"
   });
 
+  Controller.$inject = ['$http', 'classifiedsService'];
 
-  function Controller(){
+  function Controller($http, classifiedsService){
     const vm = this;
     vm.classifieds = [];
-
     vm.$onInit = onInit;
 
     function onInit(){
+      classifiedsService.getAllAds()
+      .then(function(ads){
+        vm.classifieds = ads;
+      });
     };
 
 

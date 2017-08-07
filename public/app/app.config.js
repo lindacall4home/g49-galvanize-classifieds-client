@@ -4,7 +4,15 @@
 
   angular.module('app').config(config);
 
-  function config(){
+  config.$inject = ['$stateProvider', '$urlRouterProvider', '$locationProvider'];
+
+  function config($stateProvider, $urlRouterProvider, $locationProvider){
+
+    $locationProvider.html5Mode(true);
+
+    $stateProvider
+    .state({ name: 'classifieds', url: '/', component: 'classifieds' })
+
   }
 
-}())//end of file
+}());
