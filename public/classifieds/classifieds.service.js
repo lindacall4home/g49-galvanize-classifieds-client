@@ -11,8 +11,8 @@
     const vm = this;
 
     this.getAllAds = function() {
-      return $http.get('http://localhost:8000/api/classifieds/').then(response => {
-        console.log(response.data);
+      return $http.get('http://localhost:8000/api/classifieds/')
+      .then(response => {
         return response.data;
       });
     };

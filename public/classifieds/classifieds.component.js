@@ -1,6 +1,5 @@
 (function () {
     'use strict';
-    console.log("in controller");
 
   angular.module("app")
     .component('classifieds', {
@@ -21,7 +20,5 @@
         vm.classifieds = ads;
       });
     };
-
-
   };
 })(); //end of file
