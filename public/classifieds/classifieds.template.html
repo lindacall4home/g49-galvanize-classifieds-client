@@ -1,4 +1,10 @@
 <main>
+  <h1>Galvanize Classifieds</h1>
+
+  <div class="pull-right">
+    <p><a class="btn btn-info" ui-sref="createClassified">New Ad</a></p>
+  </div>
+
   <div class="row" ng-repeat = "currentAd in $ctrl.classifieds" >
       <classified classified="currentAd"></classified>
   </div>

@@ -11,7 +11,8 @@
 
     $stateProvider
     .state({ name: 'classifieds', url: '/', component: 'classifieds' })
-
+    .state({ name: 'editClassified', url: '/classifieds/:id/edit', component: 'editForm' })
+    .state({ name: 'createClassified', url: '/', component: 'editForm' });
   }
 
 }());

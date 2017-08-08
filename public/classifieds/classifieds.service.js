@@ -16,6 +16,13 @@
         return response.data;
       });
     };
+
+    this.getSingleAd = function() {
+      return $http.get('http://localhost:8000/api/classifieds/')
+      .then(response => {
+        return response.data;
+      });
+    };
   }
 
 })();

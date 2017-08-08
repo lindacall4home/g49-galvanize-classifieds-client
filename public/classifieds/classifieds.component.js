@@ -20,5 +20,16 @@
         vm.classifieds = ads;
       });
     };
+
+    // vm.createAd = function(){
+    //   classifiedsService.getSingleAd()
+    //   .then(function (ad) {
+    //     var newAd = ad.data;
+    //     newAd.createdAt = Date.now();
+    //     vm.classifieds.push(newAd);
+    //   });
+    //
+    //   delete vm.classified;
+    // };
   };
 })(); //end of file

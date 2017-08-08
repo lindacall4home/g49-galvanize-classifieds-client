@@ -1,0 +1,30 @@
+<main class="container">
+
+  <div class="row">
+    <div class="col-md-8">
+        <form novalidate name="$ctrl.editForm">
+          <div ng-class="{'has-error' : $ctrl.editForm.title.$invalid}">
+            <label for="title">Title</label>
+            <input id="title" class="form-control" ng-model="$ctrl.classified.title" required name="title">
+          </div>
+          <div ng-class="{'has-error' : $ctrl.editForm.description.$invalid}">
+            <label for="description">Description</label>
+            <textarea id="description" class="form-control" ng-model="$ctrl.classified.description" required name="description"></textarea>
+          </div>
+          <div ng-class="{'has-error' : $ctrl.editForm.itemImage.$invalid}">
+            <label for="item_image">Image URL</label>
+            <input id="item_image" class="form-control" ng-model="$ctrl.classified.item_image" required name="item_image">
+          </div>
+          <div ng-class="{'has-error' : $ctrl.editForm.price.$invalid}">
+            <label for="price">Price</label>
+            <input id="price" class="form-control" ng-model="$ctrl.classified.price" required name="price">
+          </div>
+          <div class="form-group">
+            <button type="submit" class="btn btn-primary" ng-disabled="$ctrl.editForm.$invalid" ng-click="$ctrl.createAd()" >
+              Save
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+</main>
