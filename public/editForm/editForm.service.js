@@ -22,8 +22,14 @@
     this.postAd = function(ad){
       console.log("in postAd");
       return  $http.post('http://localhost:8000/api/classifieds/', ad)
-      .then(newAd => newAd)
+      .then(newAd => newAd);
     };
+
+    this.patchAd = function(id){
+      console.log("in patchAd");
+      return $http.patch('http://localhost:8000/api/classifieds/' + id)
+      .then(editedAd => editedAd);
+    }
   }
 
 })();
